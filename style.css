@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+body{
+    background-color: #f5f8ff;
+}
+.master{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+#search-container{
+    margin: 40px auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search-container input{
+    padding: 5px;
+    border-bottom: 1px solid #4c4c4c;
+    background-color: transparent;
+    margin: 5px;
+    width: 100%;
+}
+#search-container button{
+    background-color:#6759ff;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    width: 90px;
+    cursor: pointer;
+}
+@media (max-width:580px) {
+    #search-container{
+        flex-wrap: wrap;
+    }
+    #search-container button{
+        width: 100%;
+        margin: 10px;
+    }
+}
+.btns{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,50%);
+    position: absolute;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.btns .btn-value{
+    padding: 12px;
+    margin: 5px ;
+    border: 1px solid #6759ff;
+    color: #6759ff;
+    background-color: transparent;
+    border-radius: 15px; 
+    cursor: pointer;
+}
+.btns .btn-value.active{
+    background-color: #6759ff;
+    color: white;
+}
+.btns .btn-value:hover{
+    background-color: #6759ff;
+    color: white;
+    transition-duration: 0.5s;
+}
+.products{
+    width: 95%;
+    position: absolute;
+    display: grid;
+    gap: 10px;
+    margin: 150px 50px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.products .card{
+    padding: 10px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    margin: 10px;
+}
+.products .card:hover{
+    transform: scale(1.03);
+}
+.products .card img{
+    height: 150px;
+    object-fit: contain;
+}
+.products .card h4{
+    color: #4c4c4c;
+    margin-top: 10px;
+
+}
+.card p{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.card button{
+    background-color:#6759ff;
+    margin-top: 20px;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    width: 90px;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter and Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="master">
+        <div id="search-container">
+            <input type="text" class="seach-input" 
+            onkeyup="if(event.key === 'Enter') searchProducts()"
+            placeholder="Search products here...">
+            <button id="search" onclick="searchProducts()">Search</button>
+        </div>
+        <div class="btns">
+            <button class="btn-value active"onclick="setActive(this);showAll()">All</button>
+            <button class="btn-value"onclick="setActive(this);filter(`women's clothing`)">Woman</button>
+            <button class="btn-value"onclick="setActive(this);filter(`men's clothing`)">Men</button>
+            <button class="btn-value"onclick="setActive(this);filter(`jewelery`)">Jewelery</button>
+            <button class="btn-value"onclick="setActive(this);filter(`electronics`)">electronics</button>
+        </div>
+        <div class="products">
+            
+        </div>
+    </div>
+    <script src="move.js"></script>
+</body>
+</html>
